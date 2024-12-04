@@ -23,21 +23,21 @@ public class Tabuleiro {
             Peca pecaProxima = (indiceAtual + 1 < pecas.size()) ? pecas.get(indiceAtual + 1) : null;
 
             if (pecaProxima == null) {
-                System.out.println("Não há próxima peça para encaixar");
+                System.out.println("Nao ha proxima peca para encaixar");
                 break;
             }
 
             if (pecaAtual.encaixarCom(pecaProxima)) {
-                System.out.println("Encaixe válido: " + pecaAtual);
+                System.out.println("Encaixe valido: " + pecaAtual);
                 indiceAtual++;
             } else {
-                System.out.println("Não é possível encaixar a peça: " + pecaAtual);
+                System.out.println("Nao eh possivel encaixar a peca: " + pecaAtual);
                 break;
             }
         }
 
         if (indiceAtual == pecas.size()) {
-            System.out.println("Todas as peças foram encaixadas com sucesso!");
+            System.out.println("Todas as pecas foram encaixadas com sucesso!");
         }
     }
 }
